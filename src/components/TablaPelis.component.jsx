@@ -17,11 +17,11 @@ const TablaPelis = (props) =>
                 props.peliculas.map((pelicula)=> {
                     return <tr key={`pelicula_${pelicula.id}`}>
                         <td>{pelicula.id}</td>
-                        <td>{pelicula.nombre}</td>
-                        <td>{pelicula.fecha}</td>
-                        <td>{pelicula.recaudacion}</td>
-                        <td>{pelicula.fase}</td>
-                        <td>{pelicula.postcreditos}</td>
+                        <td>{pelicula.title}</td>
+                        <td>{pelicula.release_date}</td>
+                        <td>{parseInt(pelicula.box_office).toLocaleString()}</td>
+                        <td>{pelicula.phase}</td>
+                        <td>{pelicula.post_credit_scenes}</td>
                         <td>
                             <a href="#">Seleccionar</a>
                         </td>
