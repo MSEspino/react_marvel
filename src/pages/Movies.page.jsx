@@ -1,4 +1,7 @@
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import CardDeck from "../components/CardDeck.component"
+import MenuLateral from "../components/MenuLateral.component"
+import TablaPelis from "../components/TablaPelis.component"
 
 const MoviesPage= () =>
 {
@@ -6,13 +9,16 @@ const MoviesPage= () =>
         <h1>Marvel Cinematic Universe (MCU)</h1>
         <div className="row">
             <div className="col-3">
-                <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a className="nav-link active" id="v-pills-tabla-tab" data-toggle="pill" href="#v-pills-tabla" role="tab" aria-controls="v-pills-tabla" aria-selected="true">
-                        Tabla
-                    </a>
-                    <a className="nav-link" id="v-pills-card-tab" data-toggle="pill" href="#v-pills-card" role="tab" aria-controls="v-pills-card" aria-selected="false">
-                        Card
-                    </a>
+                <MenuLateral />
+            </div>
+            <div className="col-9">
+                <div className="tab-content" id="v-pills-tabContent">
+                    <div className="tab-pane fade show active" id="v-pills-tabla" role="tabpanel" aria-labelledby="v-pills-tabla-tab">
+                        <TablaPelis />
+                    </div>
+                    <div className="tab-pane fade" id="v-pills-card" role="tabpanel" aria-labelledby="v-pills-card-tab">
+                        <CardDeck />
+                    </div>
                 </div>
             </div>
         </div>
