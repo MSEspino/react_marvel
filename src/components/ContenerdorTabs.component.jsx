@@ -3,7 +3,7 @@ import CardDeck from "./CardDeck.component"
 
 const ContenedorTabs = (props) =>
 {
-    if(props.modo == 1)
+    if(props.modo === 1)
     {
         //Modo tabla
         return <div className="tab-content" id="v-pills-tabContent">
