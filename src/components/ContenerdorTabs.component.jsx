@@ -8,7 +8,7 @@ const ContenedorTabs = (props) =>
         //Modo tabla
         return <div className="tab-content" id="v-pills-tabContent">
             <div className="tab-pane fade show active" id="v-pills-tabla" role="tabpanel" aria-labelledby="v-pills-tabla-tab">
-                <TablaPelis />
+                <TablaPelis peliculas={props.peliculas}/>
             </div>
         </div>
     }
@@ -16,7 +16,7 @@ const ContenedorTabs = (props) =>
         //Modo deck
         return <div className="tab-content" id="v-pills-tabContent">
             <div className="tab-pane fade show active" id="v-pills-card" role="tabpanel" aria-labelledby="v-pills-card-tab">
-                <CardDeck />
+                <CardDeck peliculas={props.peliculas} />
             </div>
         </div>
     }
